@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Counter</string>
     <string name="_1crown">+1 Ворона</string>
+    <string name="full_screen">Full screen</string>
 </resources>

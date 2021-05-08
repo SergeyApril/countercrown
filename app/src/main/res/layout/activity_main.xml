@@ -27,4 +27,13 @@
         app:layout_constraintTop_toBottomOf="@+id/tvCounterCrown"
         tools:layout_editor_absoluteX="159dp" />
 
+    <Button
+        android:id="@+id/btnFullScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="fullScreenActivity"
+        android:text="@string/full_screen"
+        app:layout_constraintTop_toBottomOf="@+id/btnCounterIncrement"
+        tools:layout_editor_absoluteX="171dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

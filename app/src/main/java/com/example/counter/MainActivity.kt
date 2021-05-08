@@ -1,5 +1,6 @@
 package com.example.counter
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -34,8 +35,13 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
-        var tvCounterCrown: TextView
-        tvCounterCrown = findViewById(R.id.tvCounterCrown)
+        var tvCounterCrown: TextView = findViewById(R.id.tvCounterCrown)
         tvCounterCrown.text = savedInstanceState?.getString("COUNT")
+    }
+    fun fullScreenActivity(view: View){
+        val fullscreenIntent = Intent(this, fullscreen::class.java)
+        val tvCounterCrown: TextView = findViewById(R.id.tvCounterCrown)
+        fullscreenIntent.putExtra("count", tvCounterCrown.text.toString())
+        startActivity(fullscreenIntent)
     }
 }
